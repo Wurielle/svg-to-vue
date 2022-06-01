@@ -52,10 +52,6 @@ const tasks = new Listr(
 
 try {
     tasks.run()
-        .then(() => {
-            console.log(argv)
-        })
 } catch (e) {
     console.error(e)
-    console.log(argv)
 }
