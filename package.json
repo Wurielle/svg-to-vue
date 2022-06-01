@@ -1,0 +1,28 @@
+{
+  "name": "@wurielle/svg-to-vue",
+  "version": "0.1.0",
+  "description": "Transform your svgs into vue components",
+  "main": "index.js",
+  "bin": {
+    "svg-to-vue": "stv.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wurielle/svg-to-vue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wurielle/svg-to-vue/issues"
+  },
+  "homepage": "https://github.com/Wurielle/svg-to-vue#readme",
+  "dependencies": {
+    "change-case": "^4.1.2",
+    "glob": "^8.0.3",
+    "listr2": "^4.0.5",
+    "minimist": "^1.2.6"
+  }
+}
