@@ -1,13 +1,19 @@
 # SVG to Vue
 Generate Vue components for your SVG icons.
 
+## Install
+```bash
+npm config set @wurielle:registry https://npm.pkg.github.com && npm install @wurielle/svg-to-vue
+```
 ## Usage
 
 > STV will try to handle the case type of your SVG files so if you have a SVG file named `arrow_right.svg`, `arrowRight.svg` or `arrow-right.svg` it will create a component named `ArrowRight.vue` accordingly.
 
 Use the `stv` command to generate components from a folder containing SVG icons:
 
-`stv ./path/to/svg/folder --output=./src/components/icons --prepend=my --append=icon --ts`
+```bash
+stv ./path/to/svg/folder --output=./src/components/icons --prepend=my --append=icon --ts
+```
 
 Which will output:
 
