@@ -1,13 +1,14 @@
 {
   "name": "@wurielle/svg-to-vue",
   "version": "0.1.0",
-  "description": "Transform your svgs into vue components",
+  "description": "Generate vue components for your svg files.",
   "main": "./bin/stv.js",
   "bin": {
     "stv": "./bin/stv.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,11 @@
     "glob": "^8.0.3",
     "listr2": "^4.0.5",
     "minimist": "^1.2.6"
-  }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "./bin"
+  ]
 }
