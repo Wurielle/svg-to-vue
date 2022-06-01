@@ -2,9 +2,9 @@
   "name": "@wurielle/svg-to-vue",
   "version": "0.1.0",
   "description": "Transform your svgs into vue components",
-  "main": "index.js",
+  "main": "./bin/stv.js",
   "bin": {
-    "svg-to-vue": "stv.js"
+    "stv": "./bin/stv.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
