@@ -9,6 +9,7 @@ const targetDir = path.resolve(cwd, argv._[0])
 const outputDir = argv.output ? path.resolve(cwd, argv.output) : path.join(targetDir, 'components')
 const prepend = argv.prepend || '';
 const append = argv.append || '';
+const isTypescript = argv.ts;
 
 const ctx = {}
 const tasks = new Listr(
@@ -40,7 +41,7 @@ const tasks = new Listr(
                 fs.mkdirSync(outputDir, { recursive: true })
                 ctx.filesMetadatas.forEach(async ({filepath, componentName, componentFilename}) => {
                     const fileConent = await fs.readFileSync(path.resolve(targetDir, filepath), 'utf8')
-                    const template = `<template>\n${fileConent}</template>\n<script>export default { name: '${componentName}' }</script>\n`
+                    const template = `<template>\n${fileConent}</template>\n<script${isTypescript && ' lang="ts"' || ''}>export default { name: '${componentName}' }</script>\n`
                     fs.writeFileSync(path.resolve(outputDir, `${componentFilename}.vue`), template)
                 })
             },
