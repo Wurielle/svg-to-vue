@@ -1,7 +1,7 @@
 {
   "name": "@wurielle/svg-to-vue",
   "version": "0.1.0",
-  "description": "Generate vue components for your svg files.",
+  "description": "Generate Vue components for your SVG files.",
   "main": "./bin/stv.js",
   "bin": {
     "stv": "./bin/stv.js"
